@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+</head>
+
+<body>
+    <form>
+        <p>1.Для какого вида спорта нужен мяч?</p>
+        <label>
+            <input type="radio" name="resl1" value="1">
+            Футбол
+        </label><br>
+        <label>
+                <input type="radio" name="resl1" value="0">
+                Бокс
+        </label><br>
+        <label>
+                <input type="radio" name="resl1" value="0">
+                Хоккей
+        </label><br>
+        <label>
+                <input type="radio" name="resl1" value="0">
+                Фигурное катание
+        </label><br>
+
+        <p>2.Как называется Питерская футбольная команда?</p>
+        <label>
+                <input type="radio" name="resl2" value="0">
+                ЦСК
+            </label><br>
+        <label>
+                    <input type="radio" name="resl2" value="1">
+                    Зенит
+            </label><br>
+        <label>
+                    <input type="radio" name="resl2" value="0">
+                    Спартак
+            </label><br>
+        <label>
+                    <input type="radio" name="resl2" value="0">
+                    Локомотив
+            </label><br>
+
+        <p>3.Какой вид спорта не относится к боевым?</p>
+        <label>
+                <input type="radio" name="resl3" value="0">
+                Сабмо
+            </label><br>
+        <label>
+                    <input type="radio" name="resl3" value="0">
+                    Бокс
+            </label><br>
+        <label>
+                    <input type="radio" name="resl3" value="1">
+                    Футбол
+            </label><br>
+        <label>
+                    <input type="radio" name="resl3" value="0">
+                    Карате
+            </label><br>
+
+        <p>4.Для какого вида спорта спортсменов подбтрают по росту?</p>
+        <label>
+                <input type="radio" name="resl4" value="0">
+                Сабмо
+            </label><br>
+        <label>
+                    <input type="radio" name="resl4" value="0">
+                    Бокс
+            </label><br>
+        <label>
+                    <input type="radio" name="resl4" value="1">
+                    Баскетбол
+            </label><br>
+        <label>
+                    <input type="radio" name="resl4" value="0">
+                    Карате
+            </label><br>
+
+        <p>5.Кто был эмилемой олимпийских игр 1980 году?</p>
+        <label>
+                <input type="radio" name="resl5" value="0">
+                Заяц
+            </label><br>
+        <label>
+                    <input type="radio" name="resl5" value="0">
+                    Олень
+            </label><br>
+        <label>
+                    <input type="radio" name="resl5" value="1">
+                    Мишка
+            </label><br>
+        <label>
+                    <input type="radio" name="resl5" value="0">
+                    Белка
+            </label><br> Итого баллов: <input type="text" name="result" readonly>
+
+        <input type="button" id="calc" value="Подсчитать результаты">
+    </form>
+    <script>
+        calc.onclick = function() {
+
+            const myform = this.form;
+            myform.result.value = +myform.resl1.value + +myform.resl2.value + +myform.resl3.value + +myform.resl4.value + +myform.resl5.value;
+            if (myform.result.value == 3) {
+                alert("Удовлетворительно")
+            } else if (myform.result.value == 4) {
+                alert("Хорошо")
+            } else if (myform.result.value == 5) {
+                alert("отлично")
+            } else {
+                alert("Неудовлетворительно")
+            }
+        }
+    </script>
+</body>
+
+</html>
